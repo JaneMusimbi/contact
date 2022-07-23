@@ -44,7 +44,12 @@ RecyclerView.Adapter<ContactViewHolder>(){
             intent.putExtra("Name",currentContact.name)
             intent.putExtra("ADDRESS",currentContact.address)
             intent.putExtra("phoneNumber",currentContact.phoneNumber)
+            intent.putExtra("IMAGE",currentContact.image)
             context.startActivity(intent)
+            holder.binding.ivContact.setOnClickListener {
+                Toast.makeText(context,"You have clicked on my face",Toast.LENGTH_LONG)
+                    .show()
+            }
         }
     }
 
